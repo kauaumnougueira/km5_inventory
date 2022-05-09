@@ -9,6 +9,17 @@ public class Client {
     private Double price;
     private Services services;
 
+    public Client(){
+    }
+
+    public Client(String name, Integer number, String address, Double price, Services services){
+        this.name = name;
+        this.number = number;
+        this.address = address;
+        this.price = price;
+        this.services = services;
+    }
+
     public String getName() {
         return name;
     }
@@ -28,8 +39,7 @@ public class Client {
     }
     public void setAddress(String address) {
         this.address = address;
-    } 
-
+    }
 
     public Double price() {
         return price;
