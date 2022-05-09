@@ -2,8 +2,8 @@ package entities.enums;
 
 public enum Services {
     LIMPEZA,
-    MANUTENÇÃO,
-    INSTALAÇÃO,
-    DESINSTALAÇÃO,
+    MANUTENCAO,
+    INSTALACAO,
+    DESINSTALACAO,
     OUTROS;
 }

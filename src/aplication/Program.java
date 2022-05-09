@@ -16,7 +16,7 @@ public class Program {
         System.out.println("Deseja adcionar algum serviço?(y/n) ");
         String choice = inp.next();
 
-        if(choice == "y"){
+        if(choice.equals("y")){
             //criação de novos clientes 
             System.out.println("Quantos? ");
             int quantity = inp.nextInt();
@@ -32,7 +32,7 @@ public class Program {
                 System.out.println("Serviço ofertado (LIMPEZA,MANUTENÇÃO,INSTALAÇÃO, DESINSTALAÇÃO, OUTROS): ");
                 Services services = Services.valueOf(inp.next());      
                 Client client = new Client(name, number, address, price, services);      
-                System.out.println(client);
+                System.out.println(client.toString());
         }
         }else{
             //alteração de algo ja existente
