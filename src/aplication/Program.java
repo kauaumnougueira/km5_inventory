@@ -29,7 +29,7 @@ public class Program {
                 String address = inp.next();
                 System.out.println("Preço do serviço: ");
                 Double price = inp.nextDouble();
-                System.out.println("Serviço ofertado: ");
+                System.out.println("Serviço ofertado (LIMPEZA,MANUTENÇÃO,INSTALAÇÃO, DESINSTALAÇÃO, OUTROS): ");
                 Services services = Services.valueOf(inp.next());      
                 Client client = new Client(name, number, address, price, services);      
                 System.out.println(client);
