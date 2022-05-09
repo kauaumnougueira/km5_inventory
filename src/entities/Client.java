@@ -1,5 +1,7 @@
 package entities;
 
+import java.util.jar.Attributes.Name;
+
 import entities.enums.Services;
 
 public class Client {
@@ -55,4 +57,12 @@ public class Client {
         this.services = services;
     }
     
+    public static String toString(String name, Integer number, String address, Double price, Services services){
+      return "Cliente: " + name +
+      "\ntelefone para contato: " + number +
+      "\nEndereço: " + address +
+      "\nPreço: " + price +
+      "\nTipo de serviço: " + services;
+
+    }
 }
