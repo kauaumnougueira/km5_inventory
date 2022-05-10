@@ -40,6 +40,7 @@ public class Program {
                 if(choice2.equals("s")){
                     String save = client.toString();
                     Saving saving = new Saving(save);
+                    saving.writingClient();
                 }
         }
         }else{
