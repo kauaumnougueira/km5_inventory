@@ -29,12 +29,15 @@ public class Program {
                 String address = inp.next();
                 System.out.println("Preço do serviço: ");
                 Double price = inp.nextDouble();
-                System.out.println("Serviço ofertado (LIMPEZA,MANUTENÇÃO,INSTALAÇÃO, DESINSTALAÇÃO, OUTROS): ");
+                System.out.println("Serviço ofertado (LIMPEZA,MANUTENCAO,INSTALACAO, DESINSTALACAO, OUTROS): ");
                 Services services = Services.valueOf(inp.next());      
                 Client client = new Client(name, number, address, price, services);      
-                System.out.println(client.toString());
+                System.out.println(client);
+
+                System.out.println("Deseja salvar? ");
         }
         }else{
+                    
             //alteração de algo ja existente
         }
         inp.close();
