@@ -3,6 +3,7 @@ package aplication;
 import java.util.Scanner;
 
 import entities.Client;
+import entities.Saving;
 import entities.enums.Services;
 
 public class Program {
@@ -38,10 +39,7 @@ public class Program {
                 String choice2 = inp.next();
                 if(choice2.equals("s")){
                     String save = client.toString();
-                    String[] saveSplitted = save.split("#");
-                    for(String item :saveSplitted){
-                        System.out.println(item);
-                    }
+                    Saving saving = new Saving(save);
                 }
         }
         }else{
