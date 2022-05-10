@@ -6,21 +6,27 @@ import entities.Client;
 import entities.Saving;
 import entities.enums.Services;
 import javafx.application.Application;
-import javafx.scene.Scene;
-import javafx.scene.layout.StackPane;
+import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 
 public class Program  extends Application{
     @Override
-    public void start(Stage primaryStage)throws Exception{
-        primaryStage.setTitle("lol");
-        StackPane root = new StackPane();
-        primaryStage.setScene(new Scene(root, 300, 250));
-        primaryStage.show();
+    public void start(Stage stage) throws Exception{
+        //importando tela do fxml
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("layout.fxml"));
+        Parent root = loader.load();
+        Scene tela = new Scene(root);
+         
+        stage.setTitle("Gerenciador KM5");
+        stage.setScene(tela);
+        stage.show();
+    
     }
     public static void main(String[] args) throws Exception{
         launch(args);
-        Scanner inp = new Scanner(System.in);
+        /*Scanner inp = new Scanner(System.in);
 
         //login
         
@@ -57,6 +63,6 @@ public class Program  extends Application{
                     
             //alteração de algo ja existente
         }
-        inp.close();
+        inp.close();*/
     }
 }
