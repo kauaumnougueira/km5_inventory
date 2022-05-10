@@ -58,10 +58,9 @@ public class Client {
     
     public String toString(){
       return "Cliente: " + name +
-      "\ntelefone para contato: " + String.format("%s", number) +
-      "\nEndereço: " + address +
-      "\nPreço: " + String.format("%s", price) +
-      "\nTipo de serviço: " + services;
-
+      "\n#telefone para contato: " + String.format("%s", number) +
+      "\n#Endereço: " + address +
+      "\n#Preço: " + String.format("%s", price) +
+      "\n#Tipo de serviço: " + services;
     }
 }
