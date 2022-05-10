@@ -5,15 +5,25 @@ import java.util.Scanner;
 import entities.Client;
 import entities.Saving;
 import entities.enums.Services;
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
 
-public class Program {
-    public static void main(String[] args){
+public class Program  extends Application{
+    @Override
+    public void start(Stage primaryStage)throws Exception{
+        primaryStage.setTitle("lol");
+        StackPane root = new StackPane();
+        primaryStage.setScene(new Scene(root, 300, 250));
+        primaryStage.show();
+    }
+    public static void main(String[] args) throws Exception{
+        launch(args);
         Scanner inp = new Scanner(System.in);
 
         //login
         
-        
-
         System.out.println("Deseja adcionar algum serviço?(s/n) ");
         String choice = inp.next();
 
