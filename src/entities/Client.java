@@ -1,19 +1,17 @@
 package entities;
 
 
-import entities.enums.Services;
-
 public class Client {
     private String name;
-    private Integer number;
+    private String number;
     private String address;
-    private Double price;
-    private Services services;
+    private String price;
+    private String services;
 
     public Client(){
     }
 
-    public Client(String name, Integer number, String address, Double price, Services services){
+    public Client(String name, String number, String address, String price, String services){
         this.name = name;
         this.number = number;
         this.address = address;
@@ -28,10 +26,10 @@ public class Client {
         this.name = name;
     } 
 
-    public Integer getNumber() {
+    public String getNumber() {
         return number;
     }
-    public void setNumber(Integer number) {
+    public void setNumber(String number) {
         this.number = number;
     } 
 
@@ -42,25 +40,25 @@ public class Client {
         this.address = address;
     }
 
-    public Double price() {
+    public String price() {
         return price;
     }
-    public void setPrice(Double price) {
+    public void setPrice(String price) {
         this.price = price;
     } 
 
-    public Services getServices() {
+    public String getServices() {
         return services;
     }
-    public void setServices(Services services) {
+    public void setServices(String services) {
         this.services = services;
     }
     
     public String toString(){
       return "Cliente: " + name +
-      "\n#telefone para contato: " + String.format("%s", number) +
+      "\n#telefone para contato: " + number +
       "\n#Endereço: " + address +
-      "\n#Preço: " + String.format("%s", price) +
+      "\n#Preço: " + price +
       "\n#Tipo de serviço: " + services;
     }
 }

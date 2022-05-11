@@ -1,10 +1,5 @@
 package aplication;
 
-import java.util.Scanner;
-
-import entities.Client;
-import entities.Saving;
-import entities.enums.Services;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;

@@ -22,6 +22,7 @@
             <Label layoutX="41.0" layoutY="138.0" text="NÚMERO DO CLIENTE" />
             <Label layoutX="55.0" layoutY="219.0" text="PREÇO DO SERVIÇO " />
             <Label layoutX="72.0" layoutY="258.0" text="TIPO DE SERVIÇO" />
+            <Button fx:id="send" layoutX="283.0" layoutY="307.0" mnemonicParsing="false" onAction="#onSendAction" prefHeight="31.0" prefWidth="74.0" text="ENVIAR" />
       </children>
     </AnchorPane>
   </children>
