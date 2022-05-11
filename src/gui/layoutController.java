@@ -1,14 +1,11 @@
 package gui;
 
-import aplication.Program;
+
+import guiAbstract.AbstractController;
 import javafx.scene.control.Button;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.stage.Stage;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 
-public class layoutController extends Program{
+public class layoutController extends AbstractController{
     @FXML
     private Button add;
     @FXML
@@ -18,27 +15,6 @@ public class layoutController extends Program{
 
     @FXML
     public void onChangeAction() throws Exception{
-        onAction(add, "ClientAdd.fxml", "ADCIONANDO NOVOS SERVIÇOS"); 
-    }
-    
-    @FXML
-    public void onAction(Button e, String path, String title) throws Exception{
-        deleteFrame(e);
-        Stage stage = new Stage();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource(path));
-        Parent root = loader.load();
-        Scene tela = new Scene(root);
-         
-        stage.setTitle(title);
-        stage.setScene(tela);
-        stage.show();
-    }
-
-    
-    
-    public void deleteFrame(Button e){
-        //fechando a tela atual
-        Stage stageAtual = (Stage) e.getScene().getWindow(); //Obtendo a janela atual
-        stageAtual.close();
+        deleteFrameAndGo(add, "ClientAdd.fxml", "ADCIONANDO NOVOS SERVIÇOS"); 
     }
 }
