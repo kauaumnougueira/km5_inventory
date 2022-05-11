@@ -12,11 +12,11 @@
       <children>
             <Label layoutX="231.0" layoutY="35.0" prefHeight="38.0" prefWidth="180.0" text="ADCIONAR DADOS DO SERVIÇO" />
             <Button fx:id="back" layoutX="24.0" layoutY="361.0" mnemonicParsing="false" onAction="#onBackAction" text="VOLTAR" />
-            <TextField layoutX="188.0" layoutY="87.0" prefHeight="25.0" prefWidth="264.0" />
-            <TextField layoutX="189.0" layoutY="175.0" prefHeight="25.0" prefWidth="264.0" />
-            <TextField layoutX="189.0" layoutY="215.0" prefHeight="25.0" prefWidth="264.0" />
-            <TextField layoutX="188.0" layoutY="254.0" prefHeight="25.0" prefWidth="264.0" />
-            <TextField layoutX="189.0" layoutY="134.0" prefHeight="25.0" prefWidth="264.0" />
+            <TextField fx:id="name" layoutX="188.0" layoutY="87.0" prefHeight="25.0" prefWidth="264.0" />
+            <TextField fx:id="address" layoutX="189.0" layoutY="175.0" prefHeight="25.0" prefWidth="264.0" />
+            <TextField fx:id="price" layoutX="189.0" layoutY="215.0" prefHeight="25.0" prefWidth="264.0" />
+            <TextField fx:id="services" layoutX="188.0" layoutY="254.0" prefHeight="25.0" prefWidth="264.0" />
+            <TextField fx:id="number" layoutX="189.0" layoutY="134.0" prefHeight="25.0" prefWidth="264.0" />
             <Label layoutX="59.0" layoutY="91.0" text="NOME DO CLIENTE" />
             <Label layoutX="33.0" layoutY="179.0" text="ENDEREÇO DO CLIENTE" />
             <Label layoutX="41.0" layoutY="138.0" text="NÚMERO DO CLIENTE" />
