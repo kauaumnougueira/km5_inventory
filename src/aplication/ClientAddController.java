@@ -1,6 +1,7 @@
 package aplication;
 
 import entities.Client;
+import entities.Saving;
 import guiAbstract.AbstractController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -38,6 +39,9 @@ public class ClientAddController extends AbstractController{
         String services = this.price.getText();
 
         Client client = new Client(name, number, address, price, services);
+        Saving saving = new Saving(client.toString());
         System.out.println(client);
+        System.out.println(saving);
+        saving.writingClient();
     }
 }

@@ -27,7 +27,7 @@ public class Saving {
     
     public void readingClient() {
 
-        String path = "C:\\Users\\kaua\\Desktop\\pessoal\\java\\km5_inventory\\Clients.txt";
+        String path = "Clients.txt";
 
         try (BufferedReader br = new BufferedReader(new FileReader(path))) {
             String line = br.readLine();
@@ -42,13 +42,12 @@ public class Saving {
     }
 
     public void writingClient(){
-        String path = "C:\\Users\\kaua\\Desktop\\pessoal\\java\\km5_inventory\\Clients.txt";
+        String path = "Clients.txt";
 
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(path))) {
             String[] saveSplitted = save.split("#");
             for(String line : saveSplitted){
                 bw.write(line);
-                bw.newLine();
             }
         } catch (IOException e) {
             e.printStackTrace();

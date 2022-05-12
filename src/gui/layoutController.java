@@ -14,7 +14,12 @@ public class layoutController extends AbstractController{
     private Button change;
 
     @FXML
-    public void onChangeAction() throws Exception{
+    public void onChangeActionAdd() throws Exception{
         deleteFrameAndGo(add, "ClientAdd.fxml", "ADCIONANDO NOVOS SERVIÇOS"); 
+    }
+
+    @FXML
+    public void onChangeActionToSee() throws Exception{
+        deleteFrameAndGo(toSee, "Table.fxml", "TABELA");
     }
 }
