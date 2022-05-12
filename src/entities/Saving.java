@@ -5,8 +5,10 @@ import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Arrays;
 
 public class Saving {
+
     private String save;
 
     public Saving() {
@@ -25,20 +27,30 @@ public class Saving {
     }
 
     
-    public void readingClient() {
-
+    public String readingClient() {
+        //String[] lineRead = new String[5];
+        //String lineRead2 = " ";
         String path = "Clients.txt";
-
+        String lineSave = " ";
         try (BufferedReader br = new BufferedReader(new FileReader(path))) {
             String line = br.readLine();
-
+            
             while (line != null) {
-                System.out.println(line);
+              //  int i = 0;
+                
+              //  lineRead[i] = line;
                 line = br.readLine();
+                
+                lineSave += line;
+              //  i++;
             }
+           // lineRead2 = Arrays.toString(lineRead);
+            
         } catch (IOException e) {
             System.out.println("Error: " + e.getMessage());
         }
+       // return lineRead2;
+       return lineSave;
     }
 
     public void writingClient(){
