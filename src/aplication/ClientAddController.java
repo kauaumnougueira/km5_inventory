@@ -5,9 +5,10 @@ import entities.Saving;
 import guiAbstract.AbstractController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 
-public class ClientAddController extends AbstractController{
+public class ClientAddController<T> extends AbstractController{
     @FXML
     private Button back;
     @FXML
@@ -21,8 +22,8 @@ public class ClientAddController extends AbstractController{
     private TextField address;
     @FXML
     private TextField price;
-    @FXML
-    private TextField services;
+    @FXML 
+    private ChoiceBox services;
 
 
     @FXML
@@ -38,9 +39,10 @@ public class ClientAddController extends AbstractController{
         String price = this.price.getText();
         String services = this.price.getText();
 
+        //Enviando para a classe Client
         Client client = new Client(name, number, address, price, services);
         Saving saving = new Saving(client.toString());
-        System.out.println(client);
-        saving.writingClient();
+        System.out.println(client); //printando resultado do envio no console
+        saving.writingClient(); //salvando no arquivo
     }
 }

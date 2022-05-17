@@ -55,10 +55,12 @@ public class Client {
     }
     
     public String toString(){
-      return "#Cliente: " + name +
-      "\n#telefone para contato: " + number +
-      "\n#Endereço: " + address +
-      "\n#Preço: " + price +
-      "\n#Tipo de serviço: " + services;
+      return "\n-##########" + 
+      "\n-#Cliente: " + name +
+      "\n-#Telefone para contato: " + number +
+      "\n-#Endereço: " + address +
+      "\n-#Preço: " + price +
+      "\n-#Tipo de serviço: " + services +
+      "\n-##########";
     }
 }

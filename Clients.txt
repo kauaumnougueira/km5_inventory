@@ -1,5 +1,8 @@
-Cliente: aaaa
-telefone para contato: aa
-Endereço: aaa
-Preço: aa
-Tipo de serviço: aa
+
+##########
+#Cliente: sasa
+#Telefone para contato: sasasasas
+#Endereço: asa
+#Preço: sasas
+#Tipo de serviço: sasas
+##########

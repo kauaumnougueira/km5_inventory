@@ -7,6 +7,17 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 
 public class Program  extends Application{
+
+    /*
+    #########CONFIGURAÇÃO DO LAYOUT PRINCIPAL########
+    1.0 - ADCIONAR UM SERVIÇO
+        1.1 - ADCIONAR DADOS DO SERVIÇO
+    2.0 - VER TABELA
+        2.1 - VER TABELA 
+    3.0 - ALTERAR TABELA
+        3.1 - CONSTRUINDO...    
+    */
+
     @Override
     public void start(Stage stage) throws Exception{
         //importando tela do fxml
@@ -17,7 +28,6 @@ public class Program  extends Application{
         stage.setTitle("Gerenciador KM5");
         stage.setScene(tela);
         stage.show();
-    
     }
     public static void main(String[] args) throws Exception{
         launch(args);

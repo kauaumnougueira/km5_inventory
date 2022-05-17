@@ -11,8 +11,8 @@ public class TableController extends AbstractController{
     Saving saving = new Saving();
 
     @FXML
-    private Label table;
-
+    private Label table1;
+    
     @FXML
     private Button back;
     @FXML
@@ -20,8 +20,7 @@ public class TableController extends AbstractController{
 
     @FXML
     public void onToSeeAction(){
-    
-        table.setText(saving.readingClient());
+        table1.setText(saving.readingClient());
     }
 
     @FXML
