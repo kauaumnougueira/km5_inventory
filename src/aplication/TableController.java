@@ -24,7 +24,7 @@ public class TableController extends AbstractController{
     }
 
     @FXML
-    public void onBackAction() throws Exception{
+    public void onBackAction(){
         deleteFrameAndGo(back, "layout.fxml", "Gerenciador KM5");
     }
 

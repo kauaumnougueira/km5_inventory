@@ -40,14 +40,14 @@ public class ClientAddController extends AbstractController implements Initializ
     
 
     @FXML
-    public void onBackAction() throws Exception{
+    public void onBackAction(){
         deleteFrameAndGo(back, "layout.fxml", "Gerenciador KM5");
     }
 
 
     //getting values
     @FXML
-    public void onSendAction() throws Exception{
+    public void onSendAction(){
         String name = this.name.getText();
         String number = this.number.getText();
         String address = this.address.getText();

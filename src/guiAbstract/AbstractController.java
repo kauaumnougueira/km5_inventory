@@ -10,20 +10,23 @@ import javafx.stage.Stage;
 public abstract class AbstractController {
 
     @FXML
-    public void deleteFrameAndGo(Button e, String path, String title) throws Exception{
-        //fechando a tela atual
-        Stage stageAtual = (Stage) e.getScene().getWindow(); //Obtendo a janela atual
-        stageAtual.close();
-        //Abrindo nova tela
-        Stage stage = new Stage();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource(path));
-        Parent root = loader.load();
-        Scene tela = new Scene(root);
+    public void deleteFrameAndGo(Button e, String path, String title){
+        try{
+            //fechando a tela atual
+            Stage stageAtual = (Stage) e.getScene().getWindow(); //Obtendo a janela atual
+            stageAtual.close();
+            //Abrindo nova tela
+            Stage stage = new Stage();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(path));
+            Parent root = loader.load();
+            Scene tela = new Scene(root);
          
-        stage.setTitle(title);
-        stage.setScene(tela);
-        stage.show();
-    
+            stage.setTitle(title);
+            stage.setScene(tela);
+            stage.show();
+        }catch(Exception exception){
+            exception.getMessage();
+        }
     }
 
 }
