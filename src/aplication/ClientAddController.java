@@ -47,7 +47,7 @@ public class ClientAddController extends AbstractController implements Initializ
 
     //getting values
     @FXML
-    public void onSendAction(){
+    public void onSendAction() throws Exception{
         String name = this.name.getText();
         String number = this.number.getText();
         String address = this.address.getText();
@@ -59,6 +59,8 @@ public class ClientAddController extends AbstractController implements Initializ
         Saving saving = new Saving(client.toString());
         System.out.println(client); //printando resultado do envio no console
         saving.writingClient(); //salvando no arquivo
+
+        deleteFrameAndGo(send, "layout.fxml", "Gerenciador KM5");
     }
 
     
