@@ -27,4 +27,6 @@ public class TableController extends AbstractController{
     public void onBackAction() throws Exception{
         deleteFrameAndGo(back, "layout.fxml", "Gerenciador KM5");
     }
+
+    //configure scroll bar
 }

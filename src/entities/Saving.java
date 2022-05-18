@@ -27,10 +27,13 @@ public class Saving {
     }
 
     public void writingClient(){
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(path))) {
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(path, true))) {
             String[] saveSplitted = save.split("-");
             for(String line : saveSplitted){
-                bw.write(line);
+                if(line == " ")
+                    bw.write(" ");
+                else
+                    bw.write(line);
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -46,7 +49,10 @@ public class Saving {
             while(line != null){
                 line = br.readLine();
                 if(line != null){
-                    lineSave += line + "\n";
+                    if(line.equals("##########"))
+                        lineSave += " ";
+                    else
+                        lineSave += line + "\n";
                 }
             }
         } catch(IOException e){

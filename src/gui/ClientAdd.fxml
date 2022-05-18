@@ -23,7 +23,7 @@
             <Label layoutX="55.0" layoutY="219.0" text="PREÇO DO SERVIÇO " />
             <Label layoutX="72.0" layoutY="258.0" text="TIPO DE SERVIÇO" />
             <Button fx:id="send" layoutX="283.0" layoutY="307.0" mnemonicParsing="false" onAction="#onSendAction" prefHeight="31.0" prefWidth="74.0" text="ENVIAR" />
-            <ChoiceBox fx:id="services" layoutX="188.0" layoutY="254.0" prefHeight="25.0" prefWidth="264.0" />
+            <ChoiceBox fx:id="servicesBox" layoutX="188.0" layoutY="254.0" prefHeight="25.0" prefWidth="264.0" />
       </children>
     </AnchorPane>
   </children>

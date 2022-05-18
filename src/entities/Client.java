@@ -61,6 +61,7 @@ public class Client {
       "\n-#Endereço: " + address +
       "\n-#Preço: " + price +
       "\n-#Tipo de serviço: " + services +
-      "\n-##########";
+      "\n-##########" +
+      "\n- ";
     }
 }
