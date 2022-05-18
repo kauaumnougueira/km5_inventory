@@ -19,17 +19,22 @@ public class Program  extends Application{
     */
 
     @Override
-    public void start(Stage stage) throws Exception{
+    public void start(Stage stage){
         //importando tela do fxml
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("layout.fxml"));
-        Parent root = loader.load();
-        Scene tela = new Scene(root);
+        try{
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("layout.fxml"));
+            Parent root = loader.load();
+            Scene tela = new Scene(root);
          
-        stage.setTitle("Gerenciador KM5");
-        stage.setScene(tela);
-        stage.show();
+            stage.setTitle("Gerenciador KM5");
+            stage.setScene(tela);
+            stage.show();
+        }catch(Exception e){
+            e.getMessage();
+        }
+        
     }
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args){
         launch(args);
     }
 }
