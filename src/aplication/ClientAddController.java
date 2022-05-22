@@ -4,7 +4,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import entities.Client;
-import entities.Saving;
+import entities.fileHandler;
 import guiAbstract.AbstractController;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -56,7 +56,8 @@ public class ClientAddController extends AbstractController implements Initializ
 
         //Enviando para a classe Client
         Client client = new Client(name, number, address, price, services);
-        Saving saving = new Saving(client.toString());
+        fileHandler saving = new fileHandler(client.toString());
+        System.out.println(("print client object: "));
         System.out.println(client); //printando resultado do envio no console
         saving.writingClient(); //salvando no arquivo
 

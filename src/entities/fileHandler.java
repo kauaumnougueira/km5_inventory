@@ -6,15 +6,16 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class Saving {
+public class fileHandler {
 
     private String save;
     String path = "Clients.txt";
+    String lineEdited;
 
-    public Saving() {
+    public fileHandler() {
     }
 
-    public Saving(String save) {
+    public fileHandler(String save) {
         this.setSave(save);
     }
 
@@ -49,15 +50,13 @@ public class Saving {
             while(line != null){
                 line = br.readLine();
                 if(line != null){
-                    if(line.equals("##########"))
-                        lineSave += " ";
-                    else
-                        lineSave += line + "\n";
+                    lineSave += line.replace("#", "") + "\n";
                 }
             }
         } catch(IOException e){
             System.out.println("Error: " + e.getMessage());
         }
+        //retorna em String para funcionar no Label Text
        return lineSave;
     }
     

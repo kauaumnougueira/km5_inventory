@@ -4,11 +4,11 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
-import entities.Saving;
+import entities.fileHandler;
 import guiAbstract.AbstractController;
 
 public class TableController extends AbstractController{
-    Saving saving = new Saving();
+    fileHandler saving = new fileHandler();
 
     @FXML
     private Label table1;
