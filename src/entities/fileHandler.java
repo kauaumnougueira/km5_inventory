@@ -60,12 +60,18 @@ public class FileHandler {
        return lineSave;
     }
 
-    public void searchFileClient(String search){
+    public boolean searchFileClient(String search){//retornando em boolean pra ativar função necessária
+        Boolean foundSearch = null;
+
         if(readingFileClient().contains(search)){
-            System.out.println("funcionou");
+            System.out.println("encontrou");
+            foundSearch = true;
         }else{
-            System.out.println("nao funcionou");
+            System.out.println("não encontrou");
+            foundSearch = false;
         }
+
+        return foundSearch;
     }
     //implementar backup
 }
