@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aplication.ClientChangeController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+            <Button fx:id="back" layoutX="287.0" layoutY="276.0" mnemonicParsing="false" onAction="#onBackAction" prefHeight="38.0" prefWidth="67.0" text="VOLTAR" />
+            <Label alignment="CENTER" layoutX="182.0" layoutY="25.0" prefHeight="52.0" prefWidth="276.0" text="O QUE DESEJA ALTERAR?" />
+            <TextField fx:id="searchBar" layoutX="156.0" layoutY="91.0" prefHeight="25.0" prefWidth="328.0" />
+            <Button fx:id="searchButton" layoutX="282.0" layoutY="140.0" mnemonicParsing="false" onAction="#onActionSearch" text="PESQUISAR" />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>

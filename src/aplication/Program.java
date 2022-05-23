@@ -1,10 +1,7 @@
 package aplication;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 
 public class Program  extends Application{
 
@@ -21,17 +18,8 @@ public class Program  extends Application{
     @Override
     public void start(Stage stage){
         //importando tela do fxml
-        try{
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("layout.fxml"));
-            Parent root = loader.load();
-            Scene tela = new Scene(root);
-         
-            stage.setTitle("Gerenciador KM5");
-            stage.setScene(tela);
-            stage.show();
-        }catch(Exception e){
-            e.getMessage();
-        }
+        ClientAddController start = new ClientAddController();
+        start.createFrame("layout.fxml", "Gerenciador KM5");
         
     }
     public static void main(String[] args){

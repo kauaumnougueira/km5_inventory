@@ -6,16 +6,16 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class fileHandler {
+public class FileHandler {
 
     private String save;
     String path = "Clients.txt";
     String lineEdited;
 
-    public fileHandler() {
+    public FileHandler() {
     }
 
-    public fileHandler(String save) {
+    public FileHandler(String save) {
         this.setSave(save);
     }
 
@@ -27,7 +27,7 @@ public class fileHandler {
         this.save = save;
     }
 
-    public void writingClient(){
+    public void writingFileClient(){
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(path, true))) {
             String[] saveSplitted = save.split("-");
             for(String line : saveSplitted){
@@ -41,7 +41,7 @@ public class fileHandler {
         }
     }
 
-    public String readingClient(){
+    public String readingFileClient(){
         String lineSave = " ";
 
         try (BufferedReader br = new BufferedReader(new FileReader(path))) {
@@ -59,5 +59,13 @@ public class fileHandler {
         //retorna em String para funcionar no Label Text
        return lineSave;
     }
-    
+
+    public void searchFileClient(String search){
+        if(readingFileClient().contains(search)){
+            System.out.println("funcionou");
+        }else{
+            System.out.println("nao funcionou");
+        }
+    }
+    //implementar backup
 }

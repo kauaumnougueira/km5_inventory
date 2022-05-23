@@ -3,12 +3,11 @@ package aplication;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-
-import entities.fileHandler;
+import entities.FileHandler;
 import guiAbstract.AbstractController;
 
-public class TableController extends AbstractController{
-    fileHandler saving = new fileHandler();
+public class ClientTableController extends AbstractController{
+    FileHandler saving = new FileHandler();
 
     @FXML
     private Label table1;
@@ -20,7 +19,7 @@ public class TableController extends AbstractController{
 
     @FXML
     public void onToSeeAction(){
-        table1.setText(saving.readingClient());
+        table1.setText(saving.readingFileClient());
     }
 
     @FXML

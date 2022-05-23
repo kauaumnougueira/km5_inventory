@@ -2,6 +2,7 @@ package guiAbstract;
 
 import java.io.IOException;
 
+import interfaces.InterfaceControllers;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -9,7 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-public abstract class AbstractController {
+public abstract class AbstractController implements InterfaceControllers{
     /*
     métodos utilizados com muita frequencia nas classes do código
     1.0 - Métodos de configuração de frames(stage)
@@ -18,6 +19,7 @@ public abstract class AbstractController {
     private Stage stageAtual;
 
     //1.0 Métodos de configuração de frames(stage)
+    
     @FXML
     public void createFrame(String path, String title){
         Stage stage = new Stage();

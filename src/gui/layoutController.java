@@ -20,6 +20,11 @@ public class layoutController extends AbstractController{
 
     @FXML
     public void onChangeActionToSee(){
-        deleteFrameAndGo(toSee, "Table.fxml", "TABELA");
+        deleteFrameAndGo(toSee, "ClientTable.fxml", "TABELA");
+    }
+
+    @FXML
+    public void onChangeActionChange(){
+        deleteFrameAndGo(change, "ClientChange.fxml", "ADCIONANDO NOVOS SERVIÇOS"); 
     }
 }
