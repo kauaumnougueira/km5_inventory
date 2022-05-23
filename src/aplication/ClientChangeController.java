@@ -4,8 +4,10 @@ import guiAbstract.AbstractController;
 import entities.FileHandler;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
 
 public class ClientChangeController extends AbstractController{
     
@@ -18,11 +20,22 @@ public class ClientChangeController extends AbstractController{
     private TextField searchBar;
     
     @FXML
+    Alert errorFoundAlert = new Alert(AlertType.NONE);
+
+    @FXML
     public void onActionSearch(){
         textFieldChangeSave();
 
         FileHandler searchFunction = new FileHandler();
-        searchFunction.searchFileClient(textFieldChangeSave());
+        Boolean foundSearch = searchFunction.searchFileClient(textFieldChangeSave()); //recebendo boolean
+        
+        if(foundSearch == true){
+            deleteFrameAndGo(searchButton , "Change.fxml", "Editar o necessário");
+        }else{
+            errorFoundAlert.setAlertType(AlertType.ERROR);
+            errorFoundAlert.setContentText("não encontrado");
+            errorFoundAlert.show();
+        }
     }
 
     @FXML

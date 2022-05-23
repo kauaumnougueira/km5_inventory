@@ -1,21 +1,15 @@
-package aplication;
-
-import java.net.URL;
-import java.util.ResourceBundle;
+package gui;
 
 import entities.Client;
 import entities.FileHandler;
 import guiAbstract.AbstractController;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 
-public class ClientAddController extends AbstractController implements Initializable{
-    String[] services = {"LIMPEZA", "MONTAGEM", "DESMONTAGEM"};
-
-
+public class ChangeController extends AbstractController{
+    
     @FXML
     private Button back;
     @FXML
@@ -34,13 +28,6 @@ public class ClientAddController extends AbstractController implements Initializ
 
     @FXML 
     private ChoiceBox<String> servicesBox;
-    
-    
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        servicesBox.getItems().addAll(services);
-    }
-    
 
     @FXML
     public void onBackAction(){
@@ -68,9 +55,9 @@ public class ClientAddController extends AbstractController implements Initializ
         Client client = new Client(name, number, address, price, data, services);
         FileHandler saving = new FileHandler(client.clientSaveMatriz());
         System.out.println(("print client object: "));
-        client.clientLog(); //printando resultado do envio no console
+        System.out.println(client); //printando resultado do envio no console
         saving.writingFileClient(); //salvando no arquivo
         
     }
-    
+    //achar parte do arquivo e substituir
 }

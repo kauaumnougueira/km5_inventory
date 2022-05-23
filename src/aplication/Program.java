@@ -20,9 +20,9 @@ public class Program  extends Application{
         //importando tela do fxml
         ClientAddController start = new ClientAddController();
         start.createFrame("layout.fxml", "Gerenciador KM5");
-        
     }
     public static void main(String[] args){
         launch(args);
     }
+    //testar show()
 }

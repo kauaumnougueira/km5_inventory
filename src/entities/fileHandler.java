@@ -8,33 +8,33 @@ import java.io.IOException;
 
 public class FileHandler {
 
-    private String save;
+    private String[][] save;
     String path = "Clients.txt";
     String lineEdited;
 
     public FileHandler() {
     }
 
-    public FileHandler(String save) {
+    public FileHandler(String[][] save) {
         this.setSave(save);
     }
 
-    public String getSave() {
+    public String[][] getSave() {
         return save;
     }
 
-    public void setSave(String save) {
+    public void setSave(String[][] save) {
         this.save = save;
     }
 
     public void writingFileClient(){
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(path, true))) {
-            String[] saveSplitted = save.split("-");
-            for(String line : saveSplitted){
-                if(line == " ")
-                    bw.write(" ");
-                else
+            //String[] saveSplitted = save[][].split("-");
+            
+            for(String[] saveSplittedLine : save){
+                for(String line : saveSplittedLine){
                     bw.write(line);
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -60,18 +60,42 @@ public class FileHandler {
        return lineSave;
     }
 
-    public boolean searchFileClient(String search){//retornando em boolean pra ativar função necessária
+    public boolean searchFileClient(String search){ //retornando em boolean pra ativar função necessária
+        String[] partFileFounded = readingFileClient().split(" "); //trasnformando o return da função em array
+        int indexArraySearch = readingFileClient().indexOf(search);//identificando index do array que tem a pesquisa
+
         Boolean foundSearch = null;
 
-        if(readingFileClient().contains(search)){
+        if(partFileFounded[indexArraySearch].contains(search)){
             System.out.println("encontrou");
             foundSearch = true;
+            foundArray(partFileFounded,indexArraySearch); //funcao que acha a parte do array
+            System.out.println(foundArray(partFileFounded,indexArraySearch));
         }else{
             System.out.println("não encontrou");
             foundSearch = false;
         }
 
+        //usar o boolean pra testar ifs e ativar methods
         return foundSearch;
     }
+
+    public void deletePartFileClient(){
+        //criar
+    }
+
+    public String foundArray(String[] partFileFounded, int indexArraySearch){
+        //documentarmelhor o método
+
+        //basicamente separar uma paerte especifica do array 
+        String partFileFoundedSplited = partFileFounded[indexArraySearch]; //atribuindo array pego pelo index à string
+        String[] partFileFoundedSplited2 = partFileFoundedSplited.split(" "); //dividindo String em novo array
+        partFileFoundedSplited = partFileFoundedSplited2[0]; //reatribuindo string com parte desejada
+        return partFileFoundedSplited;
+    }
     //implementar backup
+
+    // implementando matriz
+
+   
 }

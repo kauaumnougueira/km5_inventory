@@ -6,17 +6,27 @@ public class Client {
     private String number;
     private String address;
     private String price;
+    private String data;
     private String services;
 
     public Client(){
     }
 
-    public Client(String name, String number, String address, String price, String services){
+    public Client(String name, String number, String address, String price, String data,  String services){
         this.name = name;
         this.number = number;
         this.address = address;
         this.price = price;
+        this.data = data;
         this.services = services;
+    }
+
+    public String getData() {
+        return data;
+    }
+
+    public void setData(String data) {
+        this.data = data;
     }
 
     public String getName() {
@@ -54,14 +64,32 @@ public class Client {
         this.services = services;
     }
     
-    public String toString(){
-      return "\n-##########" + 
-      "\n-#Cliente: " + name +
-      "\n-#Telefone para contato: " + number +
-      "\n-#Endereço: " + address +
-      "\n-#Preço: " + price +
-      "\n-#Tipo de serviço: " + services +
-      "\n-##########" +
-      "\n- ";
+    public String[][] clientSaveMatriz(){
+        String clientSave[][] = 
+        {
+            {" ", " "},
+            {"#####", "####"},
+            {"\n#Cliente: ", name},
+            {"\n#Telefone para contato: ", number},
+            {"\n#Endereço: ", address},
+            {"\n#Preço: ", price},
+            {"\n#Data: ", data},
+            {"\nServiço: ", services},
+            {"\n#####", "####"},
+            {" ", " "}
+        };
+        return clientSave;
+    }
+
+    public void clientLog(){
+        for(String[] saveSplittedLine : clientSaveMatriz()){
+            for(String line : saveSplittedLine){
+                if(line == " ")
+                    System.out.println(" ");
+                else
+                    System.out.println(line);
+            }
+        }
     }
 }
+
