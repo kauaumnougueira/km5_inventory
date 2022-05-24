@@ -8,6 +8,13 @@ import java.io.IOException;
 
 public class FileHandler {
 
+    /*
+    FUNÇÕES QUE TRATAM O ARQUIVO
+    1.0 - writingFileClient() -- recebe a matriz save e transforma em String para escrever nop arquivo
+    2.0 - readingFileClient() -- transforma cada linha em uma String e "lê"
+    3.0 - searchFileClient(String search) -- pesquisa no arquivo baseado na leitura do método 2
+    */
+
     private String[][] save;
     String path = "Clients.txt";
     String lineEdited;
@@ -60,7 +67,17 @@ public class FileHandler {
        return lineSave;
     }
 
-    public boolean searchFileClient(String search){ //retornando em boolean pra ativar função necessária
+    public boolean searchFileClient(String search){
+        Boolean found = null;
+        if(readingFileClient().contains(search)){
+            System.out.println("Enontrou");
+            return found = true;
+        }else{
+            System.out.println("nao encontrou");
+            return found = false;
+        }
+    }
+    /*public boolean searchFileClient(String search){ //retornando em boolean pra ativar função necessária
         String[] partFileFounded = readingFileClient().split(" "); //trasnformando o return da função em array
         int indexArraySearch = readingFileClient().indexOf(search);//identificando index do array que tem a pesquisa
 
@@ -92,10 +109,8 @@ public class FileHandler {
         String[] partFileFoundedSplited2 = partFileFoundedSplited.split(" "); //dividindo String em novo array
         partFileFoundedSplited = partFileFoundedSplited2[0]; //reatribuindo string com parte desejada
         return partFileFoundedSplited;
-    }
+    }*/
+
     //implementar backup
-
-    // implementando matriz
-
    
 }

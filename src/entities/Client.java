@@ -67,16 +67,16 @@ public class Client {
     public String[][] clientSaveMatriz(){
         String clientSave[][] = 
         {
-            {" ", " "},
-            {"#####", "####"},
+            {"\n ", " "},
+            {"\n#####", "####"},
             {"\n#Cliente: ", name},
             {"\n#Telefone para contato: ", number},
             {"\n#Endereço: ", address},
             {"\n#Preço: ", price},
             {"\n#Data: ", data},
-            {"\nServiço: ", services},
+            {"\n#Serviço: ", services},
             {"\n#####", "####"},
-            {" ", " "}
+            {"\n ", " "}
         };
         return clientSave;
     }
