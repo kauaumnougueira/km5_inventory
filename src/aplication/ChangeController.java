@@ -1,4 +1,4 @@
-package gui;
+package aplication;
 
 import entities.Client;
 import entities.FileHandler;

@@ -70,47 +70,24 @@ public class FileHandler {
     public boolean searchFileClient(String search){
         Boolean found = null;
         if(readingFileClient().contains(search)){
+            String[] part1 = readingFileClient().split(search);
+            String part2 = part1[1];
+            String[] part3 = part2.split("#");
+            String partFinal = part3[0];
+            System.out.println("Client: " + search + partFinal);
             System.out.println("Enontrou");
-            return found = true;
+            found = true;
+            return found;
         }else{
             System.out.println("nao encontrou");
-            return found = false;
+            found = false;
+            return found;
         }
     }
-    /*public boolean searchFileClient(String search){ //retornando em boolean pra ativar função necessária
-        String[] partFileFounded = readingFileClient().split(" "); //trasnformando o return da função em array
-        int indexArraySearch = readingFileClient().indexOf(search);//identificando index do array que tem a pesquisa
 
-        Boolean foundSearch = null;
-
-        if(partFileFounded[indexArraySearch].contains(search)){
-            System.out.println("encontrou");
-            foundSearch = true;
-            foundArray(partFileFounded,indexArraySearch); //funcao que acha a parte do array
-            System.out.println(foundArray(partFileFounded,indexArraySearch));
-        }else{
-            System.out.println("não encontrou");
-            foundSearch = false;
-        }
-
-        //usar o boolean pra testar ifs e ativar methods
-        return foundSearch;
+    public void  handleSearch(){
+    
     }
-
-    public void deletePartFileClient(){
-        //criar
-    }
-
-    public String foundArray(String[] partFileFounded, int indexArraySearch){
-        //documentarmelhor o método
-
-        //basicamente separar uma paerte especifica do array 
-        String partFileFoundedSplited = partFileFounded[indexArraySearch]; //atribuindo array pego pelo index à string
-        String[] partFileFoundedSplited2 = partFileFoundedSplited.split(" "); //dividindo String em novo array
-        partFileFoundedSplited = partFileFoundedSplited2[0]; //reatribuindo string com parte desejada
-        return partFileFoundedSplited;
-    }*/
-
-    //implementar backup
+    
    
 }
