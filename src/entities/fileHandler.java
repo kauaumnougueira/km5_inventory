@@ -67,21 +67,22 @@ public class FileHandler {
        return lineSave;
     }
 
-    public boolean searchFileClient(String search){
-        Boolean found = null;
+    public String searchFileClient(String search){
+
         if(readingFileClient().contains(search)){
             String[] part1 = readingFileClient().split(search);
             String part2 = part1[1];
             String[] part3 = part2.split("#");
             String partFinal = part3[0];
             System.out.println("Client: " + search + partFinal);
+            
             System.out.println("Enontrou");
-            found = true;
-            return found;
+
+            return "Client: " + search + partFinal;
         }else{
             System.out.println("nao encontrou");
-            found = false;
-            return found;
+            
+            return null;
         }
     }
 

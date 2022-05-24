@@ -27,15 +27,17 @@ public class ClientChangeController extends AbstractController{
         textFieldChangeSave();
 
         FileHandler searchFunction = new FileHandler();
-        Boolean foundSearch = searchFunction.searchFileClient(textFieldChangeSave()); //recebendo boolean
-        
-        if(foundSearch == true){
+        String researchResult = searchFunction.searchFileClient(textFieldChangeSave()); //Botando o retorno do método na string
+
+        if(researchResult != null){
             deleteFrameAndGo(searchButton , "Change.fxml", "Editar o necessário");
         }else{
             errorFoundAlert.setAlertType(AlertType.ERROR);
             errorFoundAlert.setContentText("não encontrado");
             errorFoundAlert.show();
         }
+
+        //adcionar essa parte ao fxml
     }
 
     @FXML
