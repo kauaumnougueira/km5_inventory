@@ -2,6 +2,8 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
@@ -10,7 +12,16 @@
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
             <Button fx:id="back" layoutX="46.0" layoutY="337.0" mnemonicParsing="false" onAction="#onBackAction" text="VOLTAR" />
-            <Label fx:id="table1" alignment="CENTER" layoutX="12.0" prefHeight="326.0" prefWidth="623.0" text="*BIP BOP BUU*... AINDA EM CONSTRUÇÃO..." />
+            <TableView id="table" prefHeight="326.0" prefWidth="640.0">
+               <columns>
+                  <TableColumn id="colname" prefWidth="126.0" text="NOME" />
+                  <TableColumn id="colnumber" minWidth="0.0" prefWidth="114.0" text="NÚMERO" />
+                  <TableColumn id="colprice" prefWidth="68.0" text="PREÇO" />
+                  <TableColumn id="colservice" minWidth="0.0" prefWidth="120.0" text="SERVIÇO" />
+                  <TableColumn id="coladdress" prefWidth="133.0" text="ENDEREÇO" />
+                  <TableColumn id="coldata" prefWidth="78.0" text="DATA" />
+               </columns>
+            </TableView>
          </children>
     </AnchorPane>
   </children>

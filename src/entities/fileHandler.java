@@ -10,9 +10,10 @@ public class FileHandler {
 
     /*
     FUNÇÕES QUE TRATAM O ARQUIVO
-    1.0 - writingFileClient() -- recebe a matriz save e transforma em String para escrever nop arquivo
+    1.0 - writingFileClient() -- recebe a matriz save e transforma em String para escrever no arquivo
     2.0 - readingFileClient() -- transforma cada linha em uma String e "lê"
     3.0 - searchFileClient(String search) -- pesquisa no arquivo baseado na leitura do método 2
+    
     */
 
     private String[][] save;
@@ -77,7 +78,7 @@ public class FileHandler {
             System.out.println("Client: " + search + partFinal);
             
             System.out.println("Enontrou");
-
+            
             return "Client: " + search + partFinal;
         }else{
             System.out.println("nao encontrou");

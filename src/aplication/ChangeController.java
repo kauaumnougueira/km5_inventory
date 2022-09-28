@@ -29,6 +29,15 @@ public class ChangeController extends AbstractController{
     @FXML 
     private ChoiceBox<String> servicesBox;
 
+    ClientChangeController receber = new ClientChangeController();
+    FileHandler searchFunction = new FileHandler();
+    String researchResult = searchFunction.searchFileClient(receber.textFieldChangeSave());
+
+    public void stringToTextField(){
+        
+    }
+
+
     @FXML
     public void onBackAction(){
         deleteFrameAndGo(back, "layout.fxml", "Gerenciador KM5");

@@ -2,20 +2,30 @@
   
 #########
 #Cliente: kaua
-#Telefone para contato: a
-#Endereço: b
-#Preço: c
-#Data: d
+#Telefone para contato: 9897744568
+#Endereço: rua um
+#Preço: 150
+#Data: 22/02/1945
+#Serviço: LIMPEZA
+#########
+   
+  
+#########
+#Cliente: as
+#Telefone para contato: sda
+#Endereço: sdaas
+#Preço: sasa
+#Data: sasa
 #Serviço: MONTAGEM
 #########
   
   
 #########
-#Cliente: gaybriel
-#Telefone para contato: a
-#Endereço: d
-#Preço: ew
-#Data: dfsd
+#Cliente: xc
+#Telefone para contato: cxz
+#Endereço: xc
+#Preço: czx
+#Data: xzc
 #Serviço: MONTAGEM
 #########
   
