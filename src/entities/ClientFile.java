@@ -2,6 +2,7 @@ package entities;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import dao.ClientDao;
 
 public class ClientFile {
     //1- ler o arquivo
@@ -36,7 +37,29 @@ public class ClientFile {
         for(int i = 0; i < espaco.size(); i++){
             clientsArray = removeElement(clientsArray, clientsArray[espaco.get(i)]);
         }
+        
+        //3
+        String stringApoio = clientsArray.toString();
+        String[] clientsArrayseparado = stringApoio.split("#");
 
+        /*
+        nome
+        telefone
+        endereço
+        preço
+        data
+        servico
+        */
+
+        ClientDao clientDao = new ClientDao();
+        int aux = 0;
+
+        //criando client acessivel
+        for (int i = 0; i < clientsArray.length; i++) {
+            Client client = new Client(clientsArrayseparado[aux], clientsArrayseparado[aux + 1], clientsArrayseparado[aux + 2], clientsArrayseparado[aux + 3], clientsArrayseparado[aux + 4], clientsArrayseparado[aux + 5]);
+            aux += 6;
+            clientDao.save(client);
+        }
 
         return clientsArray;
     }
