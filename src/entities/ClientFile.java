@@ -17,7 +17,7 @@ public class ClientFile {
                 .toArray(String[]::new);
     }
     
-    public String[] toObjectFileClient(){
+    public void toObjectFileClient(){
         FileHandler readFunction = new FileHandler();
 
         //1
@@ -60,8 +60,6 @@ public class ClientFile {
             aux += 6;
             clientDao.save(client);
         }
-
-        return clientsArray;
     }
 }
  

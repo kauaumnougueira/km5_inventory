@@ -14,6 +14,7 @@ import java.util.ResourceBundle;
 import dao.ClientDao;
 import entities.Client;
 import entities.FileHandler;
+import entities.ClientFile;
 import guiAbstract.AbstractController;
 
 public class ClientTableController extends AbstractController implements Initializable{
@@ -53,6 +54,8 @@ public class ClientTableController extends AbstractController implements Initial
 
     @FXML
     public void fillTable(){
+        ClientFile clientFile = new ClientFile();
+        clientFile.toObjectFileClient();
         ObservableList<Client> clients = FXCollections.observableArrayList(new ClientDao().getClients());
         table.setItems(clients);
     }
